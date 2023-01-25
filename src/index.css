@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.cdnfonts.com/css/google-sans");
+* {
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  outline: 0;
+  position: relative;
+}
+html {
+  scroll-behavior: smooth;
+}
+.google_sans {
+  font-family: "Product Sans", sans-serif;
+}
