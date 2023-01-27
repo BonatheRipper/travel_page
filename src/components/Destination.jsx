@@ -59,7 +59,7 @@ const Destination = () => {
             </div>
           ))}
         </div>
-        <div className="w-full px-2 md:px-20 md:mt-4 flex flex-col md:flex-row justify-between items-center">
+        <div className="w-full  px-2 md:px-20 md:mt-4 flex flex-col md:flex-row justify-between items-center">
           <div className=" text-[#5E6282] w-full md:w-6/12  flex flex-col">
             <h6 className="Poppins px-2 md:px-0">Easy and Fast</h6>
             <h2 className="my-2 px-2 md:px-0 md:my-4 md:w-11/12 md:leading-l14 text-[#14183E] Volkhov font-bold text-3xl md:text-t50 md:text-left text-ceter">
@@ -86,7 +86,7 @@ const Destination = () => {
             id="increment"
             onMouseEnter={() => setPercent(true)}
             onMouseLeave={() => setPercent(false)}
-            className="Poppins relative z-10  md:my-0 my-6 px-2 md:px-0 "
+            className="Poppins  relative z-10  md:my-0 my-6 px-2 md:px-0 "
           >
             <img
               src={bright}
