@@ -36,7 +36,7 @@ const Header = () => {
                 <img
                   src={line_1}
                   alt="line_1 "
-                  className="absolute z-0 bottom-0 w-96"
+                  className="absolute z-0 bottom-0 w-96 right-0"
                 />
               </span>
               and live a new and full life
