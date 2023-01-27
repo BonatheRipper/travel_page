@@ -2,10 +2,18 @@ import React from "react";
 import { CategoryItems } from "../data/Data";
 import cat_rectangle from "../data/images/Category/cat_rectangle.png";
 import cat_dots from "../data/images/Category/cat_dots.png";
-
+import { useEffect } from "react";
+import AOS from "aos";
 const Category = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
-    <section className="caterogy_section mt-80 w-full md:mt-8 md:py-14 flex flex-col justify-center items-center relative">
+    <section
+      data-aos="fade-up"
+      className="caterogy_section mt-80 w-full md:mt-8 md:py-14 flex flex-col justify-center items-center relative"
+    >
       <img
         src={cat_dots}
         className="absolute right-0 top-20 md:top-10 w-40 md:w-auto"

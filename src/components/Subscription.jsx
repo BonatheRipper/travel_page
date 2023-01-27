@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiNavigationFill } from "react-icons/ri";
 import rounded from "../data/images/Subscription/rounded.png";
 import cat_dots from "../data/images/Category/cat_dots.png";
 
 const Subscription = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
-    <section className="px-2 relative z-10  bg-white Subscription_section  mt-2 w-full md:mt-8 md:py-4 flex flex-col justify-center items-center md:px-20">
+    <section
+      data-aos="fade-up"
+      className="px-2 relative z-10  bg-white Subscription_section  mt-2 w-full md:mt-8 md:py-4 flex flex-col justify-center items-center md:px-20"
+    >
       <div
         style={{ borderTopLeftRadius: "70px" }}
         className=" w-full md:w-10/12 py-10 rounded-lg bg-opacity-80 hover:bg-opacity-50 relative z-10	flex flex-col justify-center items-center bg-[#DFD7F9]"

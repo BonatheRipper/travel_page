@@ -12,20 +12,19 @@ import { MdNavigation } from "react-icons/md";
 import { BsBuilding, BsDot, BsHeart } from "react-icons/bs";
 import { useState, useEffect } from "react";
 import Testimonial from "./Testimonials";
-
+import AOS from "aos";
 const Destination = () => {
   const [percent, setPercent] = useState(false);
   const [num, setNum] = useState(40);
-
-  function runPercent() {
-    setPercent(true);
-    for (var i = num; i <= 100; i++) {
-      setNum(i);
-    }
-  }
-
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
-    <section className=" destination_section mt-2 w-full md:mt-8 md:py-14 flex flex-col justify-center items-center relative">
+    <section
+      data-aos="fade-up"
+      className=" destination_section mt-2 w-full md:mt-8 md:py-14 flex flex-col justify-center items-center relative"
+    >
       <div className="w-full flex flex-col items-center justify-center ">
         <h1 className="Poppins  my-2 text-base md:text-xl text-[#5E6282] font-medium">
           Top Selling

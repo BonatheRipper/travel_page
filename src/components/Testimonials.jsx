@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
 import { BsDot } from "react-icons/bs";
 import social_3 from "../data/images/Footer/social_3.png";
 import smile_1 from "../data/images/Testimonial/smile_1.png";
@@ -7,8 +8,15 @@ import { MdNavigateBefore } from "react-icons/md";
 
 const Testimonial = () => {
   const [active, setActive] = useState(false);
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
-    <div className="w-full px-3 md:px-20 md:mt-4 mt-60 flex flex-col md:flex-row justify-between items-center">
+    <div
+      data-aos="fade-up"
+      className="w-full px-3 md:px-20 md:mt-4 mt-60 flex flex-col md:flex-row justify-between items-center"
+    >
       <div className=" text-[#5E6282] w-full md:w-6/12  flex flex-col">
         <h6 className="Poppins px-2 md:px-0">Testimonials</h6>
         <h2 className="my-2 px-2 md:px-0 md:my-4 md:w-11/12 md:leading-l14 text-[#14183E] Volkhov font-bold text-3xl md:text-t50 md:text-left text-ceter">

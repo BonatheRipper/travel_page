@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "aos/dist/aos.css";
+
 import Category from "./components/Category";
 import Destination from "./components/Destination";
 import Footer from "./components/Footer";
