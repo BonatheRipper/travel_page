@@ -2,7 +2,6 @@ import React from "react";
 import { BookingItems, DestinationItems } from "../data/Data";
 import destinationBg from "../data/images/Destination/destinationBg.png";
 import woman_spread_hands from "../data/images/Destination/woman_spread_hands.jpg";
-import bar_1 from "../data/images/Destination/bar_1.png";
 import trip_2 from "../data/images/Destination/trip_2.png";
 import ongoin from "../data/images/Destination/ongoin.png";
 import bright from "../data/images/Destination/bright.png";
@@ -32,16 +31,16 @@ const Destination = () => {
         <h2 className="my-2  Volkhov text-[#14183E] font-bold text-3xl md:text-t50 md:text-left text-center">
           Top Destinations
         </h2>
-        <div className="destination_box relative md:mt-4 flex flex-col md:flex-row justify-center items-center py-4 w-full">
+        <div className="destination_box  relative md:mt-4 flex flex-col md:flex-row justify-center items-center py-4 ">
           <img
             src={destinationBg}
             alt={destinationBg}
-            className="absolute right-10 top-10"
+            className="absolute right-10  top-10"
           />
           {DestinationItems.map((item, i) => (
             <div
               key={i}
-              className=" transform scale-100 hover:scale-105 flex relative flex-col md:mx-3  justify-center items-center"
+              className="  transform scale-100 hover:scale-105 flex relative flex-col md:mx-3  justify-center items-center"
             >
               <img
                 className="relative top-0  z-0 "
