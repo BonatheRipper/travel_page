@@ -19,7 +19,7 @@ const Navbar = () => {
               <li
                 onClick={() => setActive(item)}
                 key={i}
-                className={`mx-6 py-2 px-6 text-base border  hover:border-black rounded ${
+                className={` hover:cursor-pointer mx-6  py-2 px-6 text-base border  hover:border-black rounded ${
                   item === active ? "border-black " : "border-transparent"
                 }`}
               >
@@ -30,6 +30,8 @@ const Navbar = () => {
 
           <select className="bg-transparent">
             <option>EN</option>
+            <option>GB</option>
+            <option>NG</option>
           </select>
           <div className="mobile__menu__Icon px-2 md:hidden w-full relative flex justify-end z-50">
             <button
@@ -56,7 +58,7 @@ const Navbar = () => {
                       {NavItems.map((item, i) => (
                         <li
                           key={i}
-                          className="mx-2 Poppins  text-gray-400 hover:text-gray-100 px-8 py-2 duration-1000 transition"
+                          className="mx-2 Poppins hover:cursor-pointer text-gray-400 hover:text-gray-100 px-8 py-2 duration-1000 transition"
                         >
                           {item}
                         </li>
