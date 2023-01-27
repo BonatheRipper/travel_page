@@ -10,9 +10,26 @@ module.exports = {
       backgroundColor: {
         "cb-gold": "#D2B6A2",
       },
+      fontWeight: {
+        w7: "700",
+      },
+      fontSize: {
+        t86: "86px",
+        t50: "50px",
+      },
+
       fontFamily: {
         fair: ["Playfair Display", "serif"],
       },
+      lineHeight: {
+        l11: "89px",
+        l12: "45px",
+        l14: "55px",
+      },
+      letterSpacing: {
+        tightest_1: "-0.04em",
+      },
+      width: { w400: "650px" },
     },
   },
   plugins: [],

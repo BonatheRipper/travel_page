@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.cdnfonts.com/css/google-sans");
+
 * {
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
@@ -9,10 +9,77 @@
   transition: 0.3s ease-in-out;
   outline: 0;
   position: relative;
+  margin: 0;
 }
 html {
   scroll-behavior: smooth;
 }
-.google_sans {
-  font-family: "Product Sans", sans-serif;
+.slider {
+  display: grid;
+  /* height: 250px; */
+  margin: auto;
+  position: relative;
+  width: 90%;
+  place-items: center;
+  overflow: hidden;
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+}
+.slide-track {
+  width: calc(100px * 18);
+  overflow: auto;
+  animation: scroll 20s linear infinite;
+}
+.slide-track:hover {
+  animation-play-state: paused;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100px * 9));
+  }
+}
+@media screen and (max-width: 760px) {
+  .slide-track {
+    width: calc(50px * 18);
+    overflow: auto;
+    animation: scroll 20s linear infinite;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50px * 9));
+    }
+  }
+  .slide-track:hover {
+    animation-play-state: paused;
+  }
+}
+
+.slideImage {
+  mix-blend-mode: luminosity;
+}
+
+.subscribe_btn {
+  background: linear-gradient(180deg, #ff946d 0%, #ff7d68 100%);
+  border-radius: 10px;
+}
+.subscribe_btn:hover {
+  background: black;
+}
+.sub_nav {
+  background: linear-gradient(201.65deg, #747def 10.27%, #5e3be1 100%);
+}
+.sub_nav:hover {
+  background: black;
 }
