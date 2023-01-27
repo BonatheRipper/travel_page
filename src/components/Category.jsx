@@ -4,11 +4,13 @@ import cat_rectangle from "../data/images/Category/cat_rectangle.png";
 import cat_dots from "../data/images/Category/cat_dots.png";
 import { useEffect } from "react";
 import AOS from "aos";
+import { useState } from "react";
 const Category = () => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
+  const [active, setActive] = useState(1);
   return (
     <section
       data-aos="fade-up"
@@ -27,7 +29,12 @@ const Category = () => {
       </h2>
       <div className="category_box pt-12 px-2 w-full grid grid-cols-2 gap-4 md:flex flex-col md:flex-row md:my-6 justify-center">
         {CategoryItems.map((item, i) => (
-          <div key={i} className="relative">
+          <div
+            onMouseEnter={() => setActive(i)}
+            onMouseLeave={() => setActive(1)}
+            key={i}
+            className="relative"
+          >
             <div
               className={`transform scale-100 hover:scale-105 z-10 hover:shadow-xl  bg-white ${
                 item.custom_css ? "md:shadow-xl" : ""
@@ -49,8 +56,8 @@ const Category = () => {
               src={cat_rectangle}
               alt="cat_rectangle"
               className={`absolute ${
-                item.custom_css ? "md:flex hidden" : "hidden"
-              } md:-bottom-10 -bottom-2`}
+                i === active ? "md:flex hidden" : "hidden"
+              } md:-bottom-6 -bottom-4`}
             />
           </div>
         ))}

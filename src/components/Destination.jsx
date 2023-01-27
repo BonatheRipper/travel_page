@@ -5,7 +5,6 @@ import woman_spread_hands from "../data/images/Destination/woman_spread_hands.jp
 import trip_2 from "../data/images/Destination/trip_2.png";
 import ongoin from "../data/images/Destination/ongoin.png";
 import bright from "../data/images/Destination/bright.png";
-
 import { ImLeaf } from "react-icons/im";
 import { MdNavigation } from "react-icons/md";
 import { BsBuilding, BsDot, BsHeart } from "react-icons/bs";
@@ -40,7 +39,7 @@ const Destination = () => {
           {DestinationItems.map((item, i) => (
             <div
               key={i}
-              className="  transform scale-100 hover:scale-105 flex relative flex-col md:mx-3  justify-center items-center"
+              className="  transform scale-100 hover:scale-105 flex relative flex-col md:mx-  justify-center items-center"
             >
               <img
                 className="relative top-0  z-0 "
