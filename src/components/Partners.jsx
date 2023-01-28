@@ -14,7 +14,7 @@ const Partners = () => {
   return (
     <section
       data-aos="fade-up"
-      className=" partners_section relative mt-20  w-full md:mt-8 md:py-16 flex flex-col justify-center items-center md:px-20"
+      className=" partners_section relative mt-60  w-full md:mt-8 md:py-16 flex flex-col justify-center items-center md:px-20"
     >
       <div className="w-full slider relative">
         {" "}

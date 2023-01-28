@@ -29,15 +29,10 @@ const Category = () => {
       </h2>
       <div className="category_box pt-12 px-2 w-full grid grid-cols-2 gap-4 md:flex flex-col md:flex-row md:my-6 justify-center">
         {CategoryItems.map((item, i) => (
-          <div
-            onMouseEnter={() => setActive(i)}
-            onMouseLeave={() => setActive(1)}
-            key={i}
-            className="relative"
-          >
+          <div onMouseEnter={() => setActive(i)} key={i} className="relative">
             <div
               className={`transform scale-100 hover:scale-105 z-10 hover:shadow-xl  bg-white ${
-                item.custom_css ? "md:shadow-xl" : ""
+                i === active ? "md:shadow-xl" : ""
               } px-2 py-6 rounded-xl flex my-2 md:my-2 flex-col justify-center items-center  w-full md:w-52  md:mx-8  relative`}
             >
               <img
@@ -56,8 +51,8 @@ const Category = () => {
               src={cat_rectangle}
               alt="cat_rectangle"
               className={`absolute ${
-                i === active ? "md:flex hidden" : "hidden"
-              } md:-bottom-6 -bottom-4`}
+                i === active ? "opacity-100" : "opacity-0"
+              } md:-bottom-6 -bottom-4 hidden md:flex `}
             />
           </div>
         ))}
